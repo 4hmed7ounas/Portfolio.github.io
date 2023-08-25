@@ -4,18 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
     <link rel="icon" href="./images/user.png" sizes="32x32" type="image/png">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0px;
             padding: 0px;
             background-color: rgb(0, 12, 13);
+            font-family: sans-serif;
         }
 
+        .color {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .color1 {
+            background-color: rgb(19, 50, 66);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        header {
+            height: 80px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 100px;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
 
         .navbar {
             position: fixed;
@@ -25,11 +55,182 @@
             z-index: 1;
         }
 
-        .fa {
+        .navbar-menu.active {
+            display: block;
+        }
+
+        @media (max-width: 906px) {
+            .navbar-menu {
+                list-style: none;
+                display: none;
+            }
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (min-width: 906px) {
+            .bar {
+                display: none;
+            }
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.55);
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .navbar-toggler.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .navbar-toggler.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navbar-toggler.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
+        .bar:hover {
+            opacity: 0.7;
+        }
+
+        .container li {
+            list-style-type: none;
+            margin-top: 14px;
+        }
+
+        .container li a {
+            text-decoration: none;
+            margin-right: 25px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+
+
+        @media (min-width: 768px) {
+            .consistent {
+                flex: 0 0 auto;
+                width: 33.33333333%;
+            }
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-fill {
+            flex: 1 1 auto !important;
+        }
+
+        .padding-1 {
+            padding: 0.5rem;
+        }
+
+        .padding-3 {
+            padding: 1.5rem;
+        }
+
+        .margin-3 {
+            margin: 1.5rem;
+        }
+
+        .marginBottom-1 {
+            margin-bottom: 0.25rem;
+        }
+
+        .margin-x-1 {
+            margin-left: 0.25rem !important;
+            margin-right: 0.25rem !important;
+        }
+
+        .margin-x-2 {
+            margin-left: 0.5rem !important;
+            margin-right: 0.5rem !important;
+        }
+
+        .margin-x-5 {
+            margin-left: 3rem !important;
+            margin-right: 3rem !important;
+        }
+
+        .margin-y-1 {
+            margin-top: 0.25rem !important;
+            margin-bottom: 0.25rem !important;
+        }
+
+        .margin-y-2 {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .margin-y-5 {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .card {
+            margin: 10px;
             padding: 10px;
-            font-size: 30px;
-            width: 50px;
-            text-align: center;
+            border-radius: 10px;
+        }
+
+        .card-img {
+            width: 100%;
+        }
+
+        .btn {
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        .rounded {
+            border-radius: 0.5rem;
+        }
+
+        .heading li {
+            list-style-type: disc;
+        }
+
+        .shadow {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .fa {
+            padding: 15px;
+            font-size: 20px;
             text-decoration: none;
             border-radius: 50%;
         }
@@ -37,7 +238,6 @@
         .fa:hover {
             opacity: 0.7;
         }
-
 
         .fa-facebook {
             background: #3B5998;
@@ -75,28 +275,13 @@
             color: white;
         }
 
-        .color {
-            /* background-color: rgb(5, 30, 43); */
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .color1 {
-            background-color: rgb(19, 50, 66);
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        .btn:hover {
-            background-color: rgb(0, 3, 5);
-            color: rgba(255, 255, 255, 0.75);
-        }
-
         #BackToTop {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: rgb(19, 50, 66);
             color: rgba(255, 255, 255, 0.75);
-            border: 2px solid rgba(255, 255, 255, 0.75);
+            border: 2px solid rgb(5, 30, 43);
             display: none;
         }
     </style>
@@ -105,387 +290,374 @@
 <body>
 
     <!-- header -->
-    <header style="height: 55px;">
-        <nav class="navbar navbar-expand-md navbar-dark fixed color" style="background-color: rgb(5, 30, 43);">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./images/ahmedicon.jpg" alt="Logo" width="24" height="24"
-                        class="d-inline-block align-text-top rounded-5">
-                    𝔄𝔥𝔪𝔢𝔡 𝔜𝔬𝔲𝔫𝔞𝔰</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#certificates">Certificates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#honors">Honors & Awards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#resume">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+    <header id="header">
+        <nav class="navbar color" style="background-color: rgb(5, 30, 43);">
+            <div class="container1">
+                <a class="container" style="text-decoration: none;" href="#"> <img src="./images/ahmedicon.jpg" alt=""
+                        width="30" height="30" style="border-radius: 100px; margin: 20px;">
+                    <h2 style="color: rgba(255, 255, 255, 0.75);">𝔄𝔥𝔪𝔢𝔡 𝔜𝔬𝔲𝔫𝔞𝔰</h2>
+                </a>
+                <div class="container1">
+                    <div class="navbar-toggler" id="navbarToggler">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
+                <ul class="container navbar-menu" id="navbarMenu">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#certificates">Certificates</a>
+                    </li>
+                    <li>
+                        <a href="#honors">Honors & Awards</a>
+                    </li>
+                    <li>
+                        <a href="#resume">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
     <!-- main -->
     <main>
         <!-- about -->
-        <section id="about" class="mx-5 p-3 mb-1 color">
+        <section id="about" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>About</h1>
-            <div class="row mx-1 my-1 d-flex shadow p-3 mb-1 color1 rounded">
-                <div class="p-2 flex-fill col-md-4">
+            <div class="container margin-x-1 margin-y-1 d-flex shadow padding-3 marginBottom-1 color1 rounded">
+                <div class="flex-fill consistent" style="padding: 5px;">
                     <h2>Hey all! 👋🏻 I'm Ahmed Younas</h2>
-                    <h6>I'm a passionate CS junior at FAST NUCES, interested in web development. With hands-on
+                    <p>I'm a passionate CS junior at FAST NUCES, interested in web development. With hands-on
                         experience in HTML, CSS, JavaScript, MySQL, ReactJS, and Node.js, I craft captivating web
                         applications. From dynamic front-end interfaces to robust back-end systems, I bring ideas to
                         life. My journey is defined by continuous learning and an unwavering commitment to creating
-                        exceptional digital experiences. Let's shape the future of the web together.</h6>
+                        exceptional digital experiences. Let's shape the future of the web together.</p>
                     <hr>
                     <h2>Education</h2>
-                    <h5>Bachelor's in Computer Science (Specialization in Robotics)</h5>
-                    <h6>FAST National University of Computer and Emerging Sciences</h6>
+                    <p style="font-size: larger;"><b>Bachelor's in Computer Science (Specialization in Robotics)</b></p>
+                    <p>FAST National University of Computer and Emerging Sciences, LHR</p>
                 </div>
-                <div class="p-2 flex-fill col-md-4">
+                <div class="p-2 flex-fill consistent" style="padding: 5px;">
                     <img src="./images/ahmed.jpg" alt="" class="rounded" style="width: 100%;">
                 </div>
             </div>
         </section>
         <!-- skills -->
-        <section id="skills" class="mx-5 p-3 mb-1 color">
+        <section id="skills" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>Skills</h1>
             <section id="Tskills">
-                <div class="row mx-1 my-1 shadow p-3 mb-4 rounded color1">
-                    <div class="p-2 flex-fill col-md-4">
-                        <h3>Technical Skills</h3>
-                        <ul>
-                            <li class="mx-1">
-                                <h6><b>Programming-</b> C/C++ & Javascript</h6>
+                <div class="container margin-x-1 margin-y-1 shadow padding-3 mb-4 rounded color1">
+                    <div class="flex-fill consistent">
+                        <h2>Technical Skills</h2>
+                        <ul class="heading">
+                            <li class="margin-x-1">
+                                <p><b>Programming-</b> C/C++ & Javascript</p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Web & Databases-</b> HTML, CSS, Javascript, MERN, ASP.Net, Bootstrap & MySQL</h6>
+                            <li class="margin-x-1">
+                                <p><b>Web & Databases-</b> HTML, CSS, Javascript, MERN, ASP.Net, Bootstrap & MySQL</p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Circuits-</b> Circuit Analysis & Digital Circuit Design</h6>
+                            <li class="margin-x-1">
+                                <p><b>Circuits-</b> Circuit Analysis & Digital Circuit Design</p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>CAD-</b> AutoCAD & SolidWorks</h6>
+                            <li class="margin-x-1">
+                                <p><b>CAD-</b> AutoCAD & SolidWorks</p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>MS Office-</b> Word, PowerPoint, Excel & Outlook</h6>
+                            <li class="margin-x-1">
+                                <p><b>MS Office-</b> Word, PowerPoint, Excel & Outlook</p>
                             </li>
                         </ul>
                     </div>
-                    <div class="container flex-fill col-md-4">
-                        <img src="./images/c++.png" alt="" class="img-fluid m-3">
-                        <img src="./images/js.png" alt="" class="img-fluid m-3">
-                        <img src="./images/html.png" alt="" class="img-fluid m-3">
-                        <img src="./images/css.png" alt="" class="img-fluid m-3">
-                        <img src="./images/mongo.png" alt="" class="img-fluid m-3">
-                        <img src="./images/react.png" alt="" class="img-fluid m-3">
-                        <img src="./images/node.png" alt="" class="img-fluid m-3">
-                        <img src="./images/asp.png" alt="" class="img-fluid m-3">
-                        <img src="./images/sql.png" alt="" class="img-fluid m-3">
-                        <img src="./images/bootstrap.png" alt="" class="img-fluid m-3">
-                        <img src="./images/circuits.png" alt="" class="img-fluid m-3">
-                        <img src="./images/autocad.png" alt="" class="img-fluid m-3">
-                        <img src="./images/ms.png" alt="" class="img-fluid m-3">
-                        <img src="./images/solidworks.png" alt="" class="img-fluid m-3">
+                    <div class="flex-fill consistent">
+                        <img src="./images/c++.png" alt="" class="margin-3">
+                        <img src="./images/js.png" alt="" class="margin-3">
+                        <img src="./images/html.png" alt="" class="margin-3">
+                        <img src="./images/css.png" alt="" class="margin-3">
+                        <img src="./images/mongo.png" alt="" class="margin-3">
+                        <img src="./images/react.png" alt="" class="margin-3">
+                        <img src="./images/node.png" alt="" class="margin-3">
+                        <img src="./images/asp.png" alt="" class="margin-3">
+                        <img src="./images/sql.png" alt="" class="margin-3">
+                        <img src="./images/bootstrap.png" alt="" class="margin-3">
+                        <img src="./images/circuits.png" alt="" class="margin-3">
+                        <img src="./images/autocad.png" alt="" class="margin-3">
+                        <img src="./images/ms.png" alt="" class="margin-3">
+                        <img src="./images/solidworks.png" alt="" class="margin-3">
                     </div>
                 </div>
             </section>
 
             <section id="Pskills">
-                <div class="row mx-1 my-1 shadow p-3 mb-1 rounded color1">
-                    <div class="p-2 flex-fill col-md-4">
-                        <h3>Professional Skills</h3>
-                        <ul>
-                            <li class="mx-1">
-                                <h6><b>Content Writing</b></h6>
+                <div class="container margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 rounded color1">
+                    <div class="flex-fill consistent" style="padding: 5px;">
+                        <h2>Professional Skills</h2>
+                        <ul class="heading">
+                            <li class="margin-x-1">
+                                <p><b>Content Writing</b></p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Communication</b></h6>
+                            <li class="margin-x-1">
+                                <p><b>Communication</b></p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Team Work</b></h6>
+                            <li class="margin-x-1">
+                                <p><b>Team Work</b></p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Leadership</b></h6>
+                            <li class="margin-x-1">
+                                <p><b>Leadership</b></p>
                             </li>
-                            <li class="mx-1">
-                                <h6><b>Time Management</b></h6>
+                            <li class="margin-x-1">
+                                <p><b>Time Management</b></p>
                             </li>
                         </ul>
                     </div>
-                    <div class="flex-fill col-md-4">
-                        <img src="./images/write.png" alt="" class="img-fluid m-3">
-                        <img src="./images/communication.png" alt="" class="img-fluid m-3">
-                        <img src="./images/team.png" alt="" class="img-fluid m-3">
-                        <img src="./images/leader.png" alt="" class="img-fluid m-3">
-                        <img src="./images/time.png" alt="" class="img-fluid m-3">
+                    <div class="flex-fill consistent">
+                        <img src="./images/write.png" alt="" class="margin-3">
+                        <img src="./images/communication.png" alt="" class="margin-3">
+                        <img src="./images/team.png" alt="" class="margin-3">
+                        <img src="./images/leader.png" alt="" class="margin-3">
+                        <img src="./images/time.png" alt="" class="margin-3">
                     </div>
                 </div>
             </section>
         </section>
         <!-- Projects -->
-        <section id="projects" class="mx-5 p-3 mb-1 color ">
+        <section id="projects" class="margin-x-5 padding-1 marginBottom-1 color ">
             <h1>Projects</h1>
             <hr>
             <h3>Web & Database Projects</h3>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <img src="./images/Pharmacy.png" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Medical Store - Pharmacy Management System Site</h5>
-                            <hr>
-                            <p class="card-text">A Pharmacy Management System that aimed to optimize various aspects of
-                                pharmacy operations, including inventory management, prescription tracking, and
-                                employees and customer information.</p>
-                        </div>
+            <div class="container">
+                <div class="card color1">
+                    <img src="./images/Pharmacy.png" class="card-img" alt="">
+                    <div>
+                        <h3>Medical Store - Pharmacy Management System Site</h3>
+                        <hr>
+                        <p>A Pharmacy Management System that aimed to optimize various aspects of
+                            pharmacy operations, including inventory management, prescription tracking, and
+                            employees and customer information.</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <img src="./images/wordInfo.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">WordInfo - Word Manipulation Site</h5>
-                            <hr>
-                            <p class="card-text">A word manipulation website that offers features such as converting
-                                text between uppercase and lowercase, providing word and character counts, and
-                                estimating the time to read a given paragraph in real-time. (Special: Dark Mode)</p>
-                        </div>
+                <div class="card color1">
+                    <a href="https://4hmed7ounas.github.io/WordInfo/" target="_blank"><img src="./images/wordInfo.png"
+                            class="card-img" alt=""></a>
+                    <div>
+                        <h3>WordInfo - Word Manipulation Site</h3>
+                        <hr>
+                        <p><b style="color: #C40909;">(Hosted on Github)</b> A word manipulation website that offers
+                            features such as converting
+                            text between uppercase and lowercase, providing word and character counts, and
+                            estimating the time to read a given paragraph in real-time. (Special: Dark Mode)</p>
+                        <a target="_blank" href="https://4hmed7ounas.github.io/WordInfo/" class="rounded btn"
+                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">WordInfo
+                            - A Word Manipulation Site</a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <img src="./images/newsapp.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">CaveTree News - Online News App</h5>
-                            <hr>
-                            <p class="card-text">An Online News App that offers features such as converting
-                                text between uppercase and lowercase, providing word and character counts, and
-                                estimating the time to read a given paragraph in real-time. (Special: Dark Mode) <b
-                                    style="color:#C40909 ;">In Development</b></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-
-            <h3 class="my-2">Programming Projects</h3>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Bee in the Maze.</h5>
-                            <hr>
-                            <p class="card-text">An Assembly Language based project in which a bee move from one
-                                starting point to end point from a maze by right, left, up and down keys from keyboard
-                                using subroutines, keyboard interrupts, video memory and hardware interrupts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Casino Royal - Number Guessing Game</h5>
-                            <hr>
-                            <p class="card-text">A Programming Fundamentals based project in which a player is tasked
-                                with guessing a randomly selected number within a specified range. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Music and Movies Library</h5>
-                            <hr>
-                            <p class="card-text">An Object Oriented Programming project that enables developers to
-                                design, implement, and interact with a
-                                robust software solution for organizing, cataloging, and managing an extensive
-                                collection of music tracks and movie titles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Favorite Panda - A Food Delivery App</h5>
-                            <hr>
-                            <p class="card-text">A Data Structures based project which provides a seamless and efficient
-                                platform for users to browse, order, and receive their favorite food items from a wide
-                                range of restaurants using Graph and File handling.</p>
-                        </div>
+                <div class="card color1">
+                    <img src="./images/newsapp.png" class="card-img" alt="">
+                    <div>
+                        <h3>CaveTree News - Online News App</h3>
+                        <hr>
+                        <p>An Online News App that offers features such as converting
+                            text between uppercase and lowercase, providing word and character counts, and
+                            estimating the time to read a given paragraph in real-time. (Special: Dark Mode) <b
+                                style="color:#C40909 ;">In Development</b></p>
                     </div>
                 </div>
             </div>
             <hr>
 
-            <h3 class="my-2">Circuit Analysis Projects</h3>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Light Seeking Robot</h5>
-                            <hr>
-                            <p class="card-text">Circuit Analysis based Light Seeking Robot, moves when sense light
-                                using LDR (light sensor).</p>
-                        </div>
+            <h3 class="margin-y-2">Programming Projects</h3>
+            <div class="container">
+                <div class="card color1">
+                    <a href="./files/bee-maze.txt" target="_blank"><img src="./images/bee maze.png" class="card-img"
+                            alt=""></a>
+                    <div>
+                        <h3>Bee in the Maze.</h3>
+                        <hr>
+                        <p>An Assembly Language based project in which a bee move from one
+                            starting point to end point from a maze by right, left, up and down keys from keyboard
+                            using subroutines, keyboard interrupts, video memory and hardware interrupts.</p>
+                    </div>
+                    <a target="_blank" href="./files/bee-maze.txt" class="rounded btn"
+                        style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
+                        Code Here</a>
+                </div>
+                <div class="card color1">
+                    <div>
+                        <h3>Casino Royal - Number Guessing Game</h3>
+                        <hr>
+                        <p>A Programming Fundamentals based project in which a player is tasked
+                            with guessing a randomly selected number within a specified range. </p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">Line Following & Hurdle Detecting Robot</h5>
-                            <hr>
-                            <p class="card-text">The robot crafted using LEGO Mindstorms components and advanced
-                                programming techniques.</p>
-                        </div>
+                <div class="card color1">
+                    <div>
+                        <h3>Music and Movies Library</h3>
+                        <hr>
+                        <p>An Object Oriented Programming project that enables developers to
+                            design, implement, and interact with a
+                            robust software solution for organizing, cataloging, and managing an extensive
+                            collection of music tracks and movie titles.</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <div class="card-body">
-                            <h5 class="card-title">6-bit Mini-Computational Logic Unit</h5>
-                            <hr>
-                            <p class="card-text">Digital logic design based project based on registers, multiplexers,
-                                decoders and other logic gates performing arithmetic, shift and transfer of bits
-                                operations.</p>
-                        </div>
+                <div class="card color1">
+                    <a href="./files/Fav-panda.zip" target="_blank"><img src="./images/favpanda.PNG" class="card-img"
+                            alt=""></a>
+                    <div>
+                        <h3>Favorite Panda - A Food Delivery App</h3>
+                        <hr>
+                        <p>A Data Structures based project which provides a seamless and efficient
+                            platform for users to bcontainerse, order, and receive their favorite food items from a wide
+                            range of restaurants using Graph and File handling.</p>
+                        <a target="_blank" href="./files/Fav-panda.zip" class="rounded btn"
+                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
+                            Code Here</a>
                     </div>
                 </div>
+            </div>
+            <hr>
+
+            <h3 class="margin-y-2">Circuit Analysis Projects</h3>
+            <div class="container">
+                <div class="card color1">
+                    <div>
+                        <h3>Light Seeking Robot</h3>
+                        <hr>
+                        <p>Circuit Analysis based Light Seeking Robot, moves when sense light
+                            using LDR (light sensor).</p>
+                    </div>
+                </div>
+                <div class="card color1">
+                    <a href="./images/linerobot.mp4" target="_blank"><img src="./images/linerobot.jpg" class="card-img" alt=""></a>
+                    <div>
+                        <h3>Line Following & Hurdle Detecting Robot</h3>
+                        <hr>
+                        <p>The robot crafted using LEGO Mindstorms components and advanced
+                            programming techniques.</p>
+                    </div>
+                </div>
+                <div class="card color1">
+                    <a href="./images/MCU.PNG" target="_blank"><img src="./images/MCU.PNG" class="card-img" alt=""></a>
+                    <div>
+                        <h3>6-bit Mini-Computational Logic Unit</h3>
+                        <hr>
+                        <p>Digital logic design based project based on registers, multiplexers,
+                            decoders and other logic gates performing arithmetic, shift and transfer of bits
+                            operations.</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
 
         <!-- Certificates -->
-        <section id="certificates" class="mx-5 p-3 mb-1 color rounded">
+        <section id="certificates" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Certificates</h1>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <a href="./files/htmlcss.pdf" target="_blank"><img src="./files/htmlcss.jpg"
-                                class="card-img-top" alt=""></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Basics of HTML/CSS for Beginners from OpenWeaver</h5>
-                        </div>
+            <div class="container">
+                <div class="card color1">
+                    <a href="./files/htmlcss.pdf" target="_blank"><img src="./files/htmlcss.jpg" class="card-img"
+                            alt=""></a>
+                    <div>
+                        <h4>Basics of HTML/CSS for Beginners from OpenWeaver</h4>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <a href="./files/js.pdf" target="_blank"><img src="./files/js.png" class="card-img-top"
-                                alt=""></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Basics of JavaScript for Beginners from OpenWeaver</h5>
-                        </div>
+                <div class="card color1">
+                    <a href="./files/js.pdf" target="_blank"><img src="./files/js.jpg" class="card-img" alt=""></a>
+                    <div>
+                        <h4>Basics of JavaScript for Beginners from OpenWeaver</h4>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
         <!-- Honors & Awards -->
-        <section id="honors" class="mx-5 p-3 mb-1 color rounded">
+        <section id="honors" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Honors & Awards</h1>
             <hr>
-            <h3>Dean's List of Honors</h3>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <a href="./files/fall211.jpg" target="_blank"><img src="./files/fall21.jpg" class="card-img-top"
-                                alt=""></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Dean's List Fall 2021</h5>
-                        </div>
+            <h3>Dean's List of Honors & Academic Recognition</h3>
+            <div class="container">
+                <div class="card color1">
+                    <a href="./files/fall211.jpg" target="_blank"><img src="./files/fall21.jpg" class="card-img"
+                            alt=""></a>
+                    <div>
+                        <h4>Dean's List Fall 2021</h4>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg"
-                                class="card-img-top" alt=""></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Dean's List Spring 2022</h5>
-                        </div>
+                <div class="card color1">
+                    <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg" class="card-img"
+                            alt=""></a>
+                    <div>
+                        <h4>Dean's List Spring 2022</h4>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100 color1">
-                        <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg"
-                                class="card-img-top" alt=""></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Dean's List Fall 2022</h5>
-                        </div>
+                <div class="card  color1">
+                    <a href="./files/academicfall21.jpg" target="_blank"><img src="./files/academicfall21.jpg"
+                            class="card-img" alt=""></a>
+                    <div>
+                        <h4>Certificate of Academic Recognition Fall 2021</h4>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Resume -->
-        <section id="resume" class="mx-5 p-3 mb-1 color rounded">
+        <section id="resume" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Resume</h1>
-            <div class="card mb-3 color1">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="./images/resume.png" class="img-fluid rounded-start" alt="" style="height: 100%;">
+            <div class="card color1">
+                <div class="container">
+                    <div>
+                        <img src="./images/resume.png" class="img-fluid rounded-start" alt=""
+                            style="width:100%; height: 100%;">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h1 class="card-title">Resume</h1>
-                            <p class="card-text">🚀 Excited to share my updated resume! 📝✨ Taking the next step in my
-                                journey and ready to bring my skills and experience to new opportunities. Let's connect
-                                and explore the possibilities together!</p>
-                            <a target="_blank" href="./files/AHMEDYOUNAS.pdf" class="btn color"
-                                style="background-color: rgb(5, 30, 43);">Get Resume Here</a>
-                        </div>
+                    <div style="margin-left: 13px;">
+                        <h2>Resume</h2>
+                        <p>🚀 Excited to share my updated resume! 📝✨ Taking the next step in my
+                            journey and ready to bring my skills and experience to new opportunities. Let's connect
+                            and explore the possibilities together!</p>
+                        <a target="_blank" href="./files/AHMEDYOUNAS.pdf" class="rounded btn"
+                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Get
+                            Resume Here</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- contact me -->
-        <section id="contact" class="mx-5 p-3 mb-1 color rounded">
+        <section id="contact" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Contact Me</h1>
-            <div class="text-center row mx-1 my-1 d-flex shadow p-3 mb-1 color1 rounded">
-
-                <h5><a href="mailto:ayds13579@gmail.com" class="text-decoration-none"
-                        style="color: rgba(255, 255, 255, 0.75);">ayds13579@gmail.com</a> | +92 312-582-4019</h5>
+            <div class="text-center margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 color1 rounded">
+                <a href="mailto:ayds13579@gmail.com" style="text-decoration:none; color: rgba(255, 255, 255, 0.75);"
+                    style="color: rgba(255, 255, 255, 0.75);">ayds13579@gmail.com</a> | +92 312-582-4019
             </div>
         </section>
     </main>
     <!-- footer -->
-    <footer class="py-3 color" style="background-color: rgb(5, 30, 43);">
+    <footer class="color" style="padding: 1px; text-align: center; background-color: rgb(5, 30, 43);">
         <button type="button" class="btn" id="BackToTop">&uarr;</button>
         <p class="text-center">© 2023, All rights reserved.</p>
-        <div class="text-center">
-            <a href="https://www.facebook.com/4hmed7ounass/" target="_blank" class="fa fa-facebook mx-2 my-2"></a>
-            <a href="https://twitter.com/4hmed7ounass/" target="_blank" class="fa fa-twitter mx-2 my-2"></a>
-            <a href="https://instagram.com/4hmed7ounas/" target="_blank" class="fa fa-instagram mx-2 my-2"></a>
+        <div class="text-center margin-y-2">
+            <a href="https://www.facebook.com/4hmed7ounass/" target="_blank"
+                class="fa fa-facebook margin-x-2 margin-y-2"></a>
+            <a href="https://twitter.com/4hmed7ounass/" target="_blank" class="fa fa-twitter margin-x-2 margin-y-2"></a>
+            <a href="https://instagram.com/4hmed7ounas/" target="_blank"
+                class="fa fa-instagram margin-x-2 margin-y-2"></a>
             <a href="https://www.linkedin.com/in/ahmed-younas-360b481a5" target="_blank"
-                class="fa fa-linkedin mx-2 my-2"></a>
+                class="fa fa-linkedin margin-x-2 margin-y-2"></a>
             <a href="https://www.youtube.com/channel/UCFYpnx42kj-hp9Pn7fdg_6w" target="_blank"
-                class="fa fa-youtube mx-2 my-2"></a>
-            <a href="https://github.com/4hmed7ounas" target="_blank" class="fa fa-github mx-2 my-2"></a>
-            <a href="mailto:ayds13579@gmail.com" target="_blank" class="fa fa-google mx-2 my-2"></a>
+                class="fa fa-youtube margin-x-2 margin-y-2"></a>
+            <a href="https://github.com/4hmed7ounas" target="_blank" class="fa fa-github margin-x-2 margin-y-2"></a>
+            <a href="mailto:ayds13579@gmail.com" target="_blank" class="fa fa-google margin-x-2 margin-y-2"></a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
     <script>
         let myButton = document.getElementById("BackToTop");
         window.onscroll = function () {
@@ -502,6 +674,10 @@
         }
         myButton.addEventListener("click", backToTop);
 
+        document.getElementById("navbarToggler").addEventListener("click", function () {
+            this.classList.toggle("active");
+            document.getElementById("navbarMenu").classList.toggle("active");
+        });
     </script>
 </body>
 
