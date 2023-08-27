@@ -7,288 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
     <link rel="icon" href="./images/user.png" sizes="32x32" type="image/png">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: rgb(0, 12, 13);
-            font-family: sans-serif;
-        }
-
-        .color {
-            color: rgba(255, 255, 255, 0.55);
-        }
-
-        .color1 {
-            background-color: rgb(19, 50, 66);
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        header {
-            height: 80px;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                height: 100px;
-            }
-
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 1;
-        }
-
-        .navbar-menu.active {
-            display: block;
-        }
-
-        @media (max-width: 906px) {
-            .navbar-menu {
-                list-style: none;
-                display: none;
-            }
-        }
-
-        .navbar-menu a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .navbar-toggler {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        @media (min-width: 906px) {
-            .bar {
-                display: none;
-            }
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: rgba(255, 255, 255, 0.55);
-            margin: 3px 0;
-            transition: 0.4s;
-        }
-
-        .navbar-toggler.active .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .navbar-toggler.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .navbar-toggler.active .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        .container1 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-right: 10px;
-        }
-
-        .bar:hover {
-            opacity: 0.7;
-        }
-
-        .container li {
-            list-style-type: none;
-            margin-top: 14px;
-        }
-
-        .container li a {
-            text-decoration: none;
-            margin-right: 25px;
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        a:hover {
-            opacity: 0.7;
-        }
-
-
-
-        @media (min-width: 768px) {
-            .consistent {
-                flex: 0 0 auto;
-                width: 33.33333333%;
-            }
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .flex-fill {
-            flex: 1 1 auto !important;
-        }
-
-        .padding-1 {
-            padding: 0.5rem;
-        }
-
-        .padding-3 {
-            padding: 1.5rem;
-        }
-
-        .margin-3 {
-            margin: 1.5rem;
-        }
-
-        .marginBottom-1 {
-            margin-bottom: 0.25rem;
-        }
-
-        .margin-x-1 {
-            margin-left: 0.25rem !important;
-            margin-right: 0.25rem !important;
-        }
-
-        .margin-x-2 {
-            margin-left: 0.5rem !important;
-            margin-right: 0.5rem !important;
-        }
-
-        .margin-x-5 {
-            margin-left: 3rem !important;
-            margin-right: 3rem !important;
-        }
-
-        .margin-y-1 {
-            margin-top: 0.25rem !important;
-            margin-bottom: 0.25rem !important;
-        }
-
-        .margin-y-2 {
-            margin-top: 0.5rem !important;
-            margin-bottom: 0.5rem !important;
-        }
-
-        .margin-y-5 {
-            margin-top: 3rem !important;
-            margin-bottom: 3rem !important;
-        }
-
-        .card {
-            margin: 10px;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .card-img {
-            width: 100%;
-        }
-
-        .btn {
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            opacity: 0.7;
-        }
-
-        .rounded {
-            border-radius: 0.5rem;
-        }
-
-        .heading li {
-            list-style-type: disc;
-        }
-
-        .shadow {
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        .fa {
-            padding: 15px;
-            font-size: 20px;
-            text-decoration: none;
-            border-radius: 50%;
-        }
-
-        .fa:hover {
-            opacity: 0.7;
-        }
-
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-        }
-
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
-        }
-
-        .fa-instagram {
-            background: #AE1D4C;
-            color: white;
-        }
-
-        .fa-linkedin {
-            background: #2224BD;
-            ;
-            color: white;
-        }
-
-        .fa-youtube {
-            background: #C40909;
-            color: white;
-        }
-
-        .fa-github {
-            background: black;
-            color: white;
-        }
-
-        .fa-google {
-            background: #C40909;
-            color: white;
-        }
-
-        #BackToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgb(19, 50, 66);
-            color: rgba(255, 255, 255, 0.75);
-            border: 2px solid rgb(5, 30, 43);
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
-
     <!-- header -->
     <header id="header">
         <nav class="navbar color" style="background-color: rgb(5, 30, 43);">
@@ -330,13 +52,15 @@
             </div>
         </nav>
     </header>
+
     <!-- main -->
     <main>
+
         <!-- about -->
         <section id="about" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>About</h1>
             <div class="container margin-x-1 margin-y-1 d-flex shadow padding-3 marginBottom-1 color1 rounded">
-                <div class="flex-fill consistent" style="padding: 5px;">
+                <div class="flex-fill half-adjustment" style="padding: 5px;">
                     <h2>Hey all! 👋🏻 I'm Ahmed Younas</h2>
                     <p>I'm a passionate CS junior at FAST NUCES, interested in web development. With hands-on
                         experience in HTML, CSS, JavaScript, MySQL, ReactJS, and Node.js, I craft captivating web
@@ -348,17 +72,18 @@
                     <p style="font-size: larger;"><b>Bachelor's in Computer Science (Specialization in Robotics)</b></p>
                     <p>FAST National University of Computer and Emerging Sciences, LHR</p>
                 </div>
-                <div class="p-2 flex-fill consistent" style="padding: 5px;">
+                <div class="p-2 flex-fill half-adjustment" style="padding: 5px;">
                     <img src="./images/ahmed.jpg" alt="" class="rounded" style="width: 100%;">
                 </div>
             </div>
         </section>
+
         <!-- skills -->
         <section id="skills" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>Skills</h1>
             <section id="Tskills">
                 <div class="container margin-x-1 margin-y-1 shadow padding-3 mb-4 rounded color1">
-                    <div class="flex-fill consistent">
+                    <div class="flex-fill half-adjustment">
                         <h2>Technical Skills</h2>
                         <ul class="heading">
                             <li class="margin-x-1">
@@ -378,7 +103,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="flex-fill consistent">
+                    <div class="text-center flex-fill half-adjustment">
                         <img src="./images/c++.png" alt="" class="margin-3">
                         <img src="./images/js.png" alt="" class="margin-3">
                         <img src="./images/html.png" alt="" class="margin-3">
@@ -396,10 +121,9 @@
                     </div>
                 </div>
             </section>
-
             <section id="Pskills">
                 <div class="container margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 rounded color1">
-                    <div class="flex-fill consistent" style="padding: 5px;">
+                    <div class="flex-fill half-adjustment" style="padding: 5px;">
                         <h2>Professional Skills</h2>
                         <ul class="heading">
                             <li class="margin-x-1">
@@ -419,7 +143,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="flex-fill consistent">
+                    <div class="text-center flex-fill half-adjustment">
                         <img src="./images/write.png" alt="" class="margin-3">
                         <img src="./images/communication.png" alt="" class="margin-3">
                         <img src="./images/team.png" alt="" class="margin-3">
@@ -429,6 +153,7 @@
                 </div>
             </section>
         </section>
+
         <!-- Projects -->
         <section id="projects" class="margin-x-5 padding-1 marginBottom-1 color ">
             <h1>Projects</h1>
@@ -436,7 +161,7 @@
             <h3>Web & Database Projects</h3>
             <div class="container">
                 <div class="card color1">
-                    <img src="./images/Pharmacy.png" class="card-img" alt="">
+                    <img src="./images/Pharmacy.png" class="card-img rounded" alt="">
                     <div>
                         <h3>Medical Store - Pharmacy Management System Site</h3>
                         <hr>
@@ -447,7 +172,7 @@
                 </div>
                 <div class="card color1">
                     <a href="https://4hmed7ounas.github.io/WordInfo/" target="_blank"><img src="./images/wordInfo.png"
-                            class="card-img" alt=""></a>
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h3>WordInfo - Word Manipulation Site</h3>
                         <hr>
@@ -455,13 +180,14 @@
                             features such as converting
                             text between uppercase and lowercase, providing word and character counts, and
                             estimating the time to read a given paragraph in real-time. (Special: Dark Mode)</p>
-                        <a target="_blank" href="https://4hmed7ounas.github.io/WordInfo/" class="rounded btn"
-                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">WordInfo
-                            - A Word Manipulation Site</a>
+                        <div class="margin-y-1">
+                            <a target="_blank" href="https://4hmed7ounas.github.io/WordInfo/" class="rounded btn"
+                                style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">WordInfo</a>
+                        </div>
                     </div>
                 </div>
                 <div class="card color1">
-                    <img src="./images/newsapp.png" class="card-img" alt="">
+                    <img src="./images/newsapp.png" class="card-img rounded" alt="">
                     <div>
                         <h3>CaveTree News - Online News App</h3>
                         <hr>
@@ -477,8 +203,8 @@
             <h3 class="margin-y-2">Programming Projects</h3>
             <div class="container">
                 <div class="card color1">
-                    <a href="./files/bee-maze.txt" target="_blank"><img src="./images/bee maze.png" class="card-img"
-                            alt=""></a>
+                    <a href="./files/bee-maze.txt" target="_blank"><img src="./images/bee maze.png"
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h3>Bee in the Maze.</h3>
                         <hr>
@@ -486,9 +212,11 @@
                             starting point to end point from a maze by right, left, up and down keys from keyboard
                             using subroutines, keyboard interrupts, video memory and hardware interrupts.</p>
                     </div>
-                    <a target="_blank" href="./files/bee-maze.txt" class="rounded btn"
-                        style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
-                        Code Here</a>
+                    <div class="margin-y-1">
+                        <a target="_blank" href="./files/bee-maze.txt" class="rounded btn"
+                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
+                            Code Here</a>
+                    </div>
                 </div>
                 <div class="card color1">
                     <div>
@@ -509,17 +237,19 @@
                     </div>
                 </div>
                 <div class="card color1">
-                    <a href="./files/Fav-panda.zip" target="_blank"><img src="./images/favpanda.PNG" class="card-img"
-                            alt=""></a>
+                    <a href="./files/Fav-panda.zip" target="_blank"><img src="./images/favpanda.PNG"
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h3>Favorite Panda - A Food Delivery App</h3>
                         <hr>
                         <p>A Data Structures based project which provides a seamless and efficient
-                            platform for users to bcontainerse, order, and receive their favorite food items from a wide
+                            platform for users to order, and receive their favorite food items from a wide
                             range of restaurants using Graph and File handling.</p>
-                        <a target="_blank" href="./files/Fav-panda.zip" class="rounded btn"
-                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
-                            Code Here</a>
+                        <div class="margin-y-1">
+                            <a target="_blank" href="./files/Fav-panda.zip" class="rounded btn"
+                                style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
+                                Code Here</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -536,7 +266,8 @@
                     </div>
                 </div>
                 <div class="card color1">
-                    <a href="./images/linerobot.mp4" target="_blank"><img src="./images/linerobot.jpg" class="card-img" alt=""></a>
+                    <a href="./images/linerobot.mp4" target="_blank"><img src="./images/linerobot.jpg"
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h3>Line Following & Hurdle Detecting Robot</h3>
                         <hr>
@@ -545,7 +276,8 @@
                     </div>
                 </div>
                 <div class="card color1">
-                    <a href="./images/MCU.PNG" target="_blank"><img src="./images/MCU.PNG" class="card-img" alt=""></a>
+                    <a href="./images/MCU.PNG" target="_blank"><img src="./images/MCU.PNG" class="card-img rounded"
+                            alt=""></a>
                     <div>
                         <h3>6-bit Mini-Computational Logic Unit</h3>
                         <hr>
@@ -563,14 +295,15 @@
             <h1>Certificates</h1>
             <div class="container">
                 <div class="card color1">
-                    <a href="./files/htmlcss.pdf" target="_blank"><img src="./files/htmlcss.jpg" class="card-img"
-                            alt=""></a>
+                    <a href="./files/htmlcss.pdf" target="_blank"><img src="./files/htmlcss.jpg"
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h4>Basics of HTML/CSS for Beginners from OpenWeaver</h4>
                     </div>
                 </div>
                 <div class="card color1">
-                    <a href="./files/js.pdf" target="_blank"><img src="./files/js.jpg" class="card-img" alt=""></a>
+                    <a href="./files/js.pdf" target="_blank"><img src="./files/js.jpg" class="card-img rounded"
+                            alt=""></a>
                     <div>
                         <h4>Basics of JavaScript for Beginners from OpenWeaver</h4>
                     </div>
@@ -586,24 +319,24 @@
             <h3>Dean's List of Honors & Academic Recognition</h3>
             <div class="container">
                 <div class="card color1">
-                    <a href="./files/fall211.jpg" target="_blank"><img src="./files/fall21.jpg" class="card-img"
+                    <a href="./files/fall211.jpg" target="_blank"><img src="./files/fall21.jpg" class="card-img rounded"
                             alt=""></a>
                     <div>
                         <h4>Dean's List Fall 2021</h4>
                     </div>
                 </div>
                 <div class="card color1">
-                    <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg" class="card-img"
-                            alt=""></a>
+                    <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg"
+                            class="card-img rounded" alt=""></a>
                     <div>
                         <h4>Dean's List Spring 2022</h4>
                     </div>
                 </div>
                 <div class="card  color1">
                     <a href="./files/academicfall21.jpg" target="_blank"><img src="./files/academicfall21.jpg"
-                            class="card-img" alt=""></a>
+                            class="card-img rounded" alt=""></a>
                     <div>
-                        <h4>Certificate of Academic Recognition Fall 2021</h4>
+                        <h4>Certificate of Academic Recognition for Achieving 2nd Position in Fall 2021 Semester</h4>
                     </div>
                 </div>
             </div>
@@ -615,21 +348,23 @@
             <div class="card color1">
                 <div class="container">
                     <div>
-                        <img src="./images/resume.png" class="img-fluid rounded-start" alt=""
-                            style="width:100%; height: 100%;">
+                        <img src="./images/resume.png" class="rounded" alt="" style="width:100%; height: 100%;">
                     </div>
                     <div style="margin-left: 13px;">
                         <h2>Resume</h2>
                         <p>🚀 Excited to share my updated resume! 📝✨ Taking the next step in my
                             journey and ready to bring my skills and experience to new opportunities. Let's connect
                             and explore the possibilities together!</p>
-                        <a target="_blank" href="./files/AHMEDYOUNAS.pdf" class="rounded btn"
-                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Get
-                            Resume Here</a>
+                        <div class="margin-y-1">
+                            <a target="_blank" href="./files/AHMEDYOUNAS.pdf" class="rounded btn"
+                                style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Get
+                                Resume Here</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- contact me -->
         <section id="contact" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Contact Me</h1>
@@ -639,6 +374,7 @@
             </div>
         </section>
     </main>
+
     <!-- footer -->
     <footer class="color" style="padding: 1px; text-align: center; background-color: rgb(5, 30, 43);">
         <button type="button" class="btn" id="BackToTop">&uarr;</button>
@@ -679,6 +415,7 @@
             document.getElementById("navbarMenu").classList.toggle("active");
         });
     </script>
+
 </body>
 
 </html>
