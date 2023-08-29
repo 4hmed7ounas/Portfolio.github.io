@@ -72,7 +72,7 @@
                     <p style="font-size: larger;"><b>Bachelor's in Computer Science (Specialization in Robotics)</b></p>
                     <p>FAST National University of Computer and Emerging Sciences, LHR</p>
                 </div>
-                <div class="p-2 flex-fill half-adjustment" style="padding: 5px;">
+                <div class="flex-fill half-adjustment" style="padding: 5px;">
                     <img src="./images/ahmed.jpg" alt="" class="rounded" style="width: 100%;">
                 </div>
             </div>
@@ -82,8 +82,9 @@
         <section id="skills" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>Skills</h1>
             <section id="Tskills">
-                <div class="container margin-x-1 margin-y-1 shadow padding-3 mb-4 rounded color1">
-                    <div class="flex-fill half-adjustment">
+                <div class="container margin-x-1 margin-y-1 padding-3 mb-4 rounded color1 shadow reveal"
+                    style="transition: 0.5s ease-in-out;">
+                    <div class="flex-fill half-adjustment reveal">
                         <h2>Technical Skills</h2>
                         <ul class="heading">
                             <li class="margin-x-1">
@@ -103,7 +104,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="text-center flex-fill half-adjustment">
+                    <div class="text-center flex-fill half-adjustment reveal">
                         <img src="./images/c++.png" alt="" class="margin-3">
                         <img src="./images/js.png" alt="" class="margin-3">
                         <img src="./images/html.png" alt="" class="margin-3">
@@ -122,8 +123,9 @@
                 </div>
             </section>
             <section id="Pskills">
-                <div class="container margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 rounded color1">
-                    <div class="flex-fill half-adjustment" style="padding: 5px;">
+                <div class="container margin-x-1 margin-y-1 padding-3 marginBottom-1 rounded color1 shadow reveal"
+                    style="transition: 0.5s ease-in-out;">
+                    <div class="flex-fill half-adjustment reveal" style="padding: 5px;">
                         <h2>Professional Skills</h2>
                         <ul class="heading">
                             <li class="margin-x-1">
@@ -143,7 +145,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="text-center flex-fill half-adjustment">
+                    <div class="text-center flex-fill half-adjustment reveal">
                         <img src="./images/write.png" alt="" class="margin-3">
                         <img src="./images/communication.png" alt="" class="margin-3">
                         <img src="./images/team.png" alt="" class="margin-3">
@@ -155,25 +157,25 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="margin-x-5 padding-1 marginBottom-1 color ">
+        <section id="projects" class="margin-x-5 padding-1 marginBottom-1 color">
             <h1>Projects</h1>
             <hr>
-            <h3>Web & Database Projects</h3>
+            <h3 Web class="margin-y-2 reveal">Web & Database Projects</h3>
             <div class="container">
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <img src="./images/Pharmacy.png" class="card-img rounded" alt="">
-                    <div>
+                    <div class="reveal">
                         <h3>Medical Store - Pharmacy Management System Site</h3>
                         <hr>
                         <p>A Pharmacy Management System that aimed to optimize various aspects of
                             pharmacy operations, including inventory management, prescription tracking, and
-                            employees and customer information.</p>
+                            employees and customer information using .NET Frameworks and C#.</p>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="https://4hmed7ounas.github.io/WordInfo/" target="_blank"><img src="./images/wordInfo.png"
                             class="card-img rounded" alt=""></a>
-                    <div>
+                    <div class="reveal">
                         <h3>WordInfo - Word Manipulation Site</h3>
                         <hr>
                         <p><b style="color: #C40909;">(Hosted on Github)</b> A word manipulation website that offers
@@ -186,48 +188,63 @@
                         </div>
                     </div>
                 </div>
-                <div class="card color1">
+            </div>
+            <div class="container">
+                <div class="card color1 reveal">
                     <img src="./images/newsapp.png" class="card-img rounded" alt="">
-                    <div>
+                    <div class="reveal">
                         <h3>CaveTree News - Online News App</h3>
                         <hr>
-                        <p>An Online News App that offers features such as converting
-                            text between uppercase and lowercase, providing word and character counts, and
-                            estimating the time to read a given paragraph in real-time. (Special: Dark Mode) <b
-                                style="color:#C40909 ;">In Development</b></p>
+                        <p>An Online News App which provides the current online news about the world affairs using
+                            ReactJs, JS and Bootstrap. It is a real-time news app. (Special: Dark Mode) <b style="color:#C40909 ;">In
+                                Development</b></p>
+                    </div>
+                </div>
+                <div class="card color1 reveal">
+                    <img src="./images/calculator.png" class="card-img rounded" alt="">
+                    <div class="reveal">
+                        <h3>CaveTree Calculator</h3>
+                        <hr>
+                        <p>An Online Calculator App that offers features such as addition, subtraction, division,
+                            manipulation and squaring using ReactJs, JS and Css. <b style="color:#C40909 ;">In
+                                Development</b></p>
                     </div>
                 </div>
             </div>
             <hr>
 
-            <h3 class="margin-y-2">Programming Projects</h3>
-            <div class="container">
-                <div class="card color1">
+            <h3 class="margin-y-2 reveal">Programming Projects</h3>
+            <div class="container" style="transition: 0.5s ease-in-out;">
+                <div class="card color1 reveal">
                     <a href="./files/bee-maze.txt" target="_blank"><img src="./images/bee maze.png"
                             class="card-img rounded" alt=""></a>
-                    <div>
+                    <div class="reveal">
                         <h3>Bee in the Maze.</h3>
                         <hr>
                         <p>An Assembly Language based project in which a bee move from one
                             starting point to end point from a maze by right, left, up and down keys from keyboard
                             using subroutines, keyboard interrupts, video memory and hardware interrupts.</p>
-                    </div>
-                    <div class="margin-y-1">
-                        <a target="_blank" href="./files/bee-maze.txt" class="rounded btn"
-                            style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
-                            Code Here</a>
+                        <div class="margin-y-1">
+                            <a target="_blank" href="./files/bee-maze.txt" class="rounded btn"
+                                style="background-color: rgb(5, 30, 43); padding: 6px; color: rgba(255, 255, 255, 0.75); text-decoration: none; border: 2px solid rgb(5, 30, 43)">Source
+                                Code Here</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card color1">
-                    <div>
+                <div class="card color1 reveal">
+                    <img src="./images/casino.jpg" class="card-img rounded" alt="">
+                    <div class="reveal">
                         <h3>Casino Royal - Number Guessing Game</h3>
                         <hr>
                         <p>A Programming Fundamentals based project in which a player is tasked
-                            with guessing a randomly selected number within a specified range. </p>
+                            with guessing a randomly selected number within a specified range and if guess the right
+                            number got 10x of his betting money else he lose the betting price. At the end money
+                            transferred to his/her account cutting 5% tax</p>
                     </div>
                 </div>
-                <div class="card color1">
-                    <div>
+                <div class="card color1 reveal">
+                    <img src="./images/music.jpg" class="card-img rounded" alt="">
+                    <div class="reveal">
                         <h3>Music and Movies Library</h3>
                         <hr>
                         <p>An Object Oriented Programming project that enables developers to
@@ -236,10 +253,10 @@
                             collection of music tracks and movie titles.</p>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./files/Fav-panda.zip" target="_blank"><img src="./images/favpanda.PNG"
                             class="card-img rounded" alt=""></a>
-                    <div>
+                    <div class="reveal">
                         <h3>Favorite Panda - A Food Delivery App</h3>
                         <hr>
                         <p>A Data Structures based project which provides a seamless and efficient
@@ -255,30 +272,32 @@
             </div>
             <hr>
 
-            <h3 class="margin-y-2">Circuit Analysis Projects</h3>
+            <h3 class="margin-y-2 reveal">Circuit Analysis Projects</h3>
             <div class="container">
-                <div class="card color1">
-                    <div>
+                <div class="card color1 reveal">
+                    <img src="./images/lightseeking.jpg" class="card-img rounded" alt="">
+                    <div class="reveal">
                         <h3>Light Seeking Robot</h3>
                         <hr>
                         <p>Circuit Analysis based Light Seeking Robot, moves when sense light
-                            using LDR (light sensor).</p>
+                            using LDR (light sensor). It moves right and left according to the direction and capacity of
+                            light</p>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./images/linerobot.mp4" target="_blank"><img src="./images/linerobot.jpg"
                             class="card-img rounded" alt=""></a>
-                    <div>
+                    <div class="reveal">
                         <h3>Line Following & Hurdle Detecting Robot</h3>
                         <hr>
                         <p>The robot crafted using LEGO Mindstorms components and advanced
                             programming techniques.</p>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./images/MCU.PNG" target="_blank"><img src="./images/MCU.PNG" class="card-img rounded"
                             alt=""></a>
-                    <div>
+                    <div class="reveal">
                         <h3>6-bit Mini-Computational Logic Unit</h3>
                         <hr>
                         <p>Digital logic design based project based on registers, multiplexers,
@@ -294,14 +313,14 @@
         <section id="certificates" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Certificates</h1>
             <div class="container">
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./files/htmlcss.pdf" target="_blank"><img src="./files/htmlcss.jpg"
                             class="card-img rounded" alt=""></a>
                     <div>
                         <h4>Basics of HTML/CSS for Beginners from OpenWeaver</h4>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./files/js.pdf" target="_blank"><img src="./files/js.jpg" class="card-img rounded"
                             alt=""></a>
                     <div>
@@ -317,22 +336,22 @@
             <h1>Honors & Awards</h1>
             <hr>
             <h3>Dean's List of Honors & Academic Recognition</h3>
-            <div class="container">
-                <div class="card color1">
+            <div class="container" style="transition: 0.5s ease-in-out;">
+                <div class="card color1 reveal">
                     <a href="./files/fall211.jpg" target="_blank"><img src="./files/fall21.jpg" class="card-img rounded"
                             alt=""></a>
                     <div>
                         <h4>Dean's List Fall 2021</h4>
                     </div>
                 </div>
-                <div class="card color1">
+                <div class="card color1 reveal">
                     <a href="./files/spring222.jpg" target="_blank"><img src="./files/spring22.jpg"
                             class="card-img rounded" alt=""></a>
                     <div>
                         <h4>Dean's List Spring 2022</h4>
                     </div>
                 </div>
-                <div class="card  color1">
+                <div class="card  color1 reveal">
                     <a href="./files/academicfall21.jpg" target="_blank"><img src="./files/academicfall21.jpg"
                             class="card-img rounded" alt=""></a>
                     <div>
@@ -345,12 +364,12 @@
         <!-- Resume -->
         <section id="resume" class="margin-x-5 padding-1 marginBottom-1 color rounded">
             <h1>Resume</h1>
-            <div class="card color1">
+            <div class="card color1 reveal" style="transition: 0.5s ease-in-out;">
                 <div class="container">
                     <div>
                         <img src="./images/resume.png" class="rounded" alt="" style="width:100%; height: 100%;">
                     </div>
-                    <div style="margin-left: 13px;">
+                    <div class="reveal" style="margin-left: 13px;">
                         <h2>Resume</h2>
                         <p>🚀 Excited to share my updated resume! 📝✨ Taking the next step in my
                             journey and ready to bring my skills and experience to new opportunities. Let's connect
@@ -366,11 +385,12 @@
         </section>
 
         <!-- contact me -->
-        <section id="contact" class="margin-x-5 padding-1 marginBottom-1 color rounded">
+        <section id="contact" class="margin-x-5 padding-1 color rounded "
+            style=" margin-bottom: 2.5rem; transition: 0.5s ease-in-out;">
             <h1>Contact Me</h1>
-            <div class="text-center margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 color1 rounded">
+            <div class="text-center margin-x-1 margin-y-1 shadow padding-3 marginBottom-1 color1 rounded reveal">
                 <a href="mailto:ayds13579@gmail.com" style="text-decoration:none; color: rgba(255, 255, 255, 0.75);"
-                    style="color: rgba(255, 255, 255, 0.75);">ayds13579@gmail.com</a> | +92 312-582-4019
+                    style="color: rgba(255, 255, 255, 0.75);" class="">ayds13579@gmail.com</a> | +92 312-582-4019
             </div>
         </section>
     </main>
@@ -378,7 +398,7 @@
     <!-- footer -->
     <footer class="color" style="padding: 1px; text-align: center; background-color: rgb(5, 30, 43);">
         <button type="button" class="btn" id="BackToTop">&uarr;</button>
-        <p class="text-center">© 2023, All rights reserved.</p>
+        <p class="text-center">© AHMED YOUNAS 2023, All rights reserved.</p>
         <div class="text-center margin-y-2">
             <a href="https://www.facebook.com/4hmed7ounass/" target="_blank"
                 class="fa fa-facebook margin-x-2 margin-y-2"></a>
@@ -414,6 +434,24 @@
             this.classList.toggle("active");
             document.getElementById("navbarMenu").classList.toggle("active");
         });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
     </script>
 
 </body>

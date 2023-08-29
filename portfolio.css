@@ -221,7 +221,17 @@ a:hover {
 .text-center {
     text-align: center !important;
 }
-
+.reveal{
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 .fa {
     padding: 15px;
     font-size: 20px;
